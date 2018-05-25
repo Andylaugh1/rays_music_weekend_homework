@@ -1,6 +1,8 @@
+import Interfaces.IPlay;
+
 import java.util.ArrayList;
 
-public class Guitar extends Instrument {
+public class Guitar extends Instrument implements IPlay {
 
     private GuitarString strings;
     private Fretboard fretboard;
@@ -17,6 +19,7 @@ public class Guitar extends Instrument {
 
     public Fretboard getFretboard() {
         return fretboard;
+
     }
 
     public void changeFretboard(Fretboard newFretboard) {
@@ -26,4 +29,9 @@ public class Guitar extends Instrument {
     public void changeStrings(GuitarString newGuitarString) {
         this.strings = newGuitarString;
     }
+
+    public String Play(String sound){
+        return "Now playing: " + sound;
+    }
+
 }

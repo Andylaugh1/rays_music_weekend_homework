@@ -1,4 +1,6 @@
-public class Instrument {
+import Interfaces.IPlay;
+
+public abstract class Instrument implements IPlay {
 
     private String make;
     private String model;
@@ -27,4 +29,6 @@ public class Instrument {
     public double getSellingPrice() {
         return sellingPrice;
     }
+
+    public abstract String Play(String sound);
 }

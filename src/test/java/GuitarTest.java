@@ -58,6 +58,10 @@ public class GuitarTest {
         guitarString2 = new GuitarString("Fender", 6.00, 11.00);
         guitar.changeStrings(guitarString2);
         assertEquals(6.00, guitar.getStrings().getBuyingPrice(), 0.01);
+    }
 
+    @Test
+    public void canPlay(){
+        assertEquals("Now playing: Kerrrraaannnggggg", guitar.Play("Kerrrraaannnggggg"));
     }
 }
