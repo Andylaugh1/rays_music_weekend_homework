@@ -1,4 +1,6 @@
-public class Accessory {
+import Interfaces.ISell;
+
+public class Accessory implements ISell {
 
     private String make;
     private double buyingPrice;
@@ -28,5 +30,9 @@ public class Accessory {
 
     public void changeSellingPrice(double newSellingPrice) {
         this.sellingPrice = newSellingPrice;
+    }
+
+    public double calculatePoundMarkup(){
+        return sellingPrice - buyingPrice;
     }
 }

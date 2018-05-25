@@ -38,4 +38,9 @@ public class FretboardTest {
         fretboard.changeSellingPrice(70.00);
         assertEquals(70.00, fretboard.getSellingPrice(), 0.01);
     }
+
+    @Test
+    public void canCalculatePoundMarkup(){
+        assertEquals(20.00, fretboard.calculatePoundMarkup(), 0.01);
+    }
 }
