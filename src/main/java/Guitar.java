@@ -18,4 +18,12 @@ public class Guitar extends Instrument {
     public Fretboard getFretboard() {
         return fretboard;
     }
+
+    public void changeFretboard(Fretboard newFretboard) {
+        this.fretboard = newFretboard;
+    }
+
+    public void changeStrings(GuitarString newGuitarString) {
+        this.strings = newGuitarString;
+    }
 }

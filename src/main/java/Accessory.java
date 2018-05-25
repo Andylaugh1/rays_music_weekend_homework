@@ -21,4 +21,12 @@ public class Accessory {
     public double getSellingPrice() {
         return sellingPrice;
     }
+
+    public void changeBuyingPrice(double newBuyingPrice) {
+        this.buyingPrice = newBuyingPrice;
+    }
+
+    public void changeSellingPrice(double newSellingPrice) {
+        this.sellingPrice = newSellingPrice;
+    }
 }

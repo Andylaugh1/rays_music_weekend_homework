@@ -6,8 +6,8 @@ import static org.junit.Assert.assertEquals;
 public class GuitarTest {
 
     Guitar guitar;
-    Fretboard fretboard;
-    GuitarString guitarString;
+    Fretboard fretboard, fretboard2;
+    GuitarString guitarString, guitarString2;
 
     @Before
     public void before(){
@@ -44,5 +44,20 @@ public class GuitarTest {
     @Test
     public void canGetGuitarFretboardPrice(){
         assertEquals(60.00, guitar.getFretboard().getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canChangeFretboard(){
+        fretboard2 = new Fretboard("Fender", 20.00, 50.00);
+        guitar.changeFretboard(fretboard2);
+        assertEquals(50.00, guitar.getFretboard().getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canChangeGuitarStrings(){
+        guitarString2 = new GuitarString("Fender", 6.00, 11.00);
+        guitar.changeStrings(guitarString2);
+        assertEquals(6.00, guitar.getStrings().getBuyingPrice(), 0.01);
+
     }
 }
