@@ -62,11 +62,16 @@ public class GuitarTest {
 
     @Test
     public void canPlay(){
-        assertEquals("Now playing: Kerrrraaannnggggg", guitar.Play("Kerrrraaannnggggg"));
+        assertEquals("Now playing: Kerrrrraaannnnnggg", guitar.Play());
     }
 
     @Test
     public void canCalculatePoundMarkup(){
         assertEquals(350.00, guitar.calculatePoundMarkup(), 0.01);
+    }
+
+    @Test
+    public void canCalculatePercentageMarkup(){
+        assertEquals(36.30, guitar.calculatePercentageMarkup(), 0.1);
     }
 }

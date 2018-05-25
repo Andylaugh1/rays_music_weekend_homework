@@ -30,8 +30,8 @@ public class Guitar extends Instrument implements IPlay {
         this.strings = newGuitarString;
     }
 
-    public String Play(String sound){
-        return "Now playing: " + sound;
+    public String Play(){
+        return "Now playing: Kerrrrraaannnnnggg";
     }
 
 }

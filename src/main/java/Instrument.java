@@ -31,9 +31,13 @@ public abstract class Instrument implements IPlay, ISell {
         return sellingPrice;
     }
 
-    public abstract String Play(String sound);
+    public abstract String Play();
 
     public double calculatePoundMarkup(){
         return sellingPrice - buyingPrice;
+    }
+
+    public double calculatePercentageMarkup(){
+        return (buyingPrice / sellingPrice) * 100;
     }
 }

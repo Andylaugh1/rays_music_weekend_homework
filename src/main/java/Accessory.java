@@ -35,4 +35,8 @@ public class Accessory implements ISell {
     public double calculatePoundMarkup(){
         return sellingPrice - buyingPrice;
     }
+
+    public double calculatePercentageMarkup(){
+        return (buyingPrice / sellingPrice) * 100;
+    }
 }
