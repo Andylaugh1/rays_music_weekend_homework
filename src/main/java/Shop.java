@@ -19,4 +19,8 @@ public class Shop {
     public int countInstrumentStock() {
         return instrumentStock.size();
     }
+
+    public int countAccessoryStock() {
+        return accessoryStock.size();
+    }
 }
