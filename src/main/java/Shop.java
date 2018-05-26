@@ -27,4 +27,16 @@ public class Shop {
     public void addInstrument(Instrument instrument) {
         instrumentStock.add(instrument);
     }
+
+    public void addAccessory(Accessory accessory) {
+        accessoryStock.add(accessory);
+    }
+
+    public double calculateInstrumentPoundMarkup() {
+        double totalPoundMarkup = 0;
+        for (Instrument instrument : instrumentStock){
+            totalPoundMarkup += instrument.calculatePoundMarkup();
+        }
+        return totalPoundMarkup;
+    }
 }
