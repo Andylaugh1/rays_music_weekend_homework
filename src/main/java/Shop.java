@@ -23,4 +23,8 @@ public class Shop {
     public int countAccessoryStock() {
         return accessoryStock.size();
     }
+
+    public void addInstrument(Instrument instrument) {
+        instrumentStock.add(instrument);
+    }
 }

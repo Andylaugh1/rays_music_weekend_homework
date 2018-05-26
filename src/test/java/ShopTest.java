@@ -32,4 +32,10 @@ public class ShopTest {
     public void canCountAccessoryStock(){
         assertEquals(0, shop.countAccessoryStock() );
     }
+
+    @Test
+    public void canAddInstrumentToStock(){
+        shop.addInstrument(instrument);
+        assertEquals(1, shop.countInstrumentStock());
+    }
 }
