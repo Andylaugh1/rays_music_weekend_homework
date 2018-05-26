@@ -32,6 +32,14 @@ public class Shop {
         accessoryStock.add(accessory);
     }
 
+    public void removeInstrument(Instrument instrument) {
+        instrumentStock.remove(instrument);
+    }
+
+    public void removeAccessory(Accessory accessory) {
+        accessoryStock.remove(accessory);
+    }
+
     public double calculateInstrumentPoundMarkup() {
         double totalPoundMarkup = 0;
         for (Instrument instrument : instrumentStock){
