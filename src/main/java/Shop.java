@@ -63,4 +63,9 @@ public class Shop {
         }
         return totalPercentMarkup / countAccessoryStock();
     }
+
+    public double calculateTotalProfit() {
+        double totalProfit = calculateAccessoriesPoundMarkup() + calculateInstrumentPoundMarkup();
+        return totalProfit;
+    }
 }

@@ -75,4 +75,13 @@ public class ShopTest {
         shop.addAccessory(accessory);
         assertEquals(20.00, shop.calculateAverageAccessoryPercentageMarkup(), 0.01);
     }
+
+    @Test
+    public void canCalculateTotalProfitForShop(){
+        instrument2 = new Guitar("Gibson", "Les Paul", 300.00, 500.00, guitarString, fretboard);
+        shop.addInstrument(instrument1);
+        shop.addInstrument(instrument2);
+        shop.addAccessory(accessory);
+        assertEquals(570.00, shop.calculateTotalProfit(), 0.01);
+    }
 }
