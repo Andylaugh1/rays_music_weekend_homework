@@ -61,12 +61,18 @@ public class ShopTest {
         instrument2 = new Guitar("Gibson", "Les Paul", 300.00, 500.00, guitarString, fretboard);
         shop.addInstrument(instrument1);
         shop.addInstrument(instrument2);
-        assertEquals(48.18, shop.calculateAverageAccessoryPercentageMarkup(), 0.01);
+        assertEquals(120.84, shop.calculateAverageInstrumentPercentageMarkup(), 0.01);
     }
 
     @Test
     public void canCalculatePoundMarkupForAccessories(){
         shop.addAccessory(accessory);
         assertEquals(20.00, shop.calculateAccessoriesPoundMarkup(), 0.01);
+    }
+
+    @Test
+    public void canCalculatePercentageMarkupForAccessories(){
+        shop.addAccessory(accessory);
+        assertEquals(20.00, shop.calculateAverageAccessoryPercentageMarkup(), 0.01);
     }
 }

@@ -13,7 +13,7 @@ public class GuitarTest {
     public void before(){
         fretboard = new Fretboard("Fender", 40.00, 60.00);
         guitarString = new GuitarString("Fender", 10.00, 15.00);
-        guitar = new Guitar("Fender", "Stratocaster", 200.00, 550.00, guitarString, fretboard);
+        guitar = new Guitar("Fender", "Stratocaster", 300.00, 550.00, guitarString, fretboard);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class GuitarTest {
 
     @Test
     public void canGetBuyingPrice(){
-        assertEquals(200.00, guitar.getBuyingPrice(), 0.01);
+        assertEquals(300.00, guitar.getBuyingPrice(), 0.01);
     }
 
     @Test
@@ -67,11 +67,11 @@ public class GuitarTest {
 
     @Test
     public void canCalculatePoundMarkup(){
-        assertEquals(350.00, guitar.calculatePoundMarkup(), 0.01);
+        assertEquals(250.00, guitar.calculatePoundMarkup(), 0.01);
     }
 
     @Test
     public void canCalculatePercentageMarkup(){
-        assertEquals(36.30, guitar.calculatePercentageMarkup(), 0.1);
+        assertEquals(83.33, guitar.calculatePercentageMarkup(), 0.1);
     }
 }

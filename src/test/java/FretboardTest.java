@@ -46,6 +46,6 @@ public class FretboardTest {
 
     @Test
     public void canCalculatePercentageMarkup(){
-        assertEquals(66.67, fretboard.calculatePercentageMarkup(), 0.01);
+        assertEquals(50.00, fretboard.calculatePercentageMarkup(), 0.01);
     }
 }

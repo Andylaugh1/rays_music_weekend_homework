@@ -40,7 +40,7 @@ public class Shop {
         return totalPoundMarkup;
     }
 
-    public double calculateAverageAccessoryPercentageMarkup() {
+    public double calculateAverageInstrumentPercentageMarkup() {
         double totalPercentMarkup = 0;
         for (Instrument instrument : instrumentStock){
             totalPercentMarkup += instrument.calculatePercentageMarkup();
@@ -54,5 +54,13 @@ public class Shop {
             totalPoundMarkup += accessory.calculatePoundMarkup();
         }
         return totalPoundMarkup;
+    }
+
+    public double calculateAverageAccessoryPercentageMarkup() {
+        double totalPercentMarkup = 0;
+        for (Accessory accessory : accessoryStock){
+            totalPercentMarkup += accessory.calculatePercentageMarkup();
+        }
+        return totalPercentMarkup / countAccessoryStock();
     }
 }
