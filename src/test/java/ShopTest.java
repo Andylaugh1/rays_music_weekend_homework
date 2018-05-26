@@ -63,4 +63,10 @@ public class ShopTest {
         shop.addInstrument(instrument2);
         assertEquals(48.18, shop.calculateAverageAccessoryPercentageMarkup(), 0.01);
     }
+
+    @Test
+    public void canCalculatePoundMarkupForAccessories(){
+        shop.addAccessory(accessory);
+        assertEquals(20.00, shop.calculateAccessoriesPoundMarkup(), 0.01);
+    }
 }

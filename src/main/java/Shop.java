@@ -47,4 +47,12 @@ public class Shop {
         }
         return totalPercentMarkup / countInstrumentStock();
     }
+
+    public double calculateAccessoriesPoundMarkup() {
+        double totalPoundMarkup = 0;
+        for (Accessory accessory : accessoryStock){
+            totalPoundMarkup += accessory.calculatePoundMarkup();
+        }
+        return totalPoundMarkup;
+    }
 }
