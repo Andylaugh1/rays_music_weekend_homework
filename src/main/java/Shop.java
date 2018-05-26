@@ -39,4 +39,12 @@ public class Shop {
         }
         return totalPoundMarkup;
     }
+
+    public double calculateAverageAccessoryPercentageMarkup() {
+        double totalPercentMarkup = 0;
+        for (Instrument instrument : instrumentStock){
+            totalPercentMarkup += instrument.calculatePercentageMarkup();
+        }
+        return totalPercentMarkup / countInstrumentStock();
+    }
 }
