@@ -1,3 +1,4 @@
+import Enums.InstrumentType;
 import Interfaces.IPlay;
 import Interfaces.ISell;
 
@@ -7,12 +8,14 @@ public abstract class Instrument implements IPlay, ISell {
     private String model;
     private double buyingPrice;
     private double sellingPrice;
+    private InstrumentType instrumentType;
 
-    public Instrument(String make, String model, double buyingPrice, double sellingPrice){
+    public Instrument(String make, String model, double buyingPrice, double sellingPrice, InstrumentType instrumentType){
         this.make = make;
         this.model = model;
         this.buyingPrice = buyingPrice;
         this.sellingPrice = sellingPrice;
+        this.instrumentType = instrumentType;
     }
 
     public String getMake() {
@@ -29,6 +32,10 @@ public abstract class Instrument implements IPlay, ISell {
 
     public double getSellingPrice() {
         return sellingPrice;
+    }
+
+    public InstrumentType getInstrumentType(){
+        return instrumentType;
     }
 
     public abstract String Play();

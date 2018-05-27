@@ -1,3 +1,4 @@
+import Enums.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,8 +17,8 @@ public class ShopTest {
         shop = new Shop("Ray's Music Store");
         guitarString = new GuitarString("Fender", 10.00, 15.00);
         fretboard = new Fretboard("Fender", 40.00, 60.00);
-        instrument1 = new Guitar("Fender", "Stratocaster", 200.00, 550.00, guitarString, fretboard);
-        instrument2 = new Guitar("Gibson", "Les Paul", 300.00, 500.00, guitarString, fretboard);
+        instrument1 = new Guitar("Fender", "Stratocaster", 200.00, 550.00, guitarString, fretboard, InstrumentType.GUITAR);
+        instrument2 = new Guitar("Gibson", "Les Paul", 300.00, 500.00, guitarString, fretboard, InstrumentType.GUITAR);
         accessory = new Fretboard("Buffalo", 100.00, 120.00);
     }
 

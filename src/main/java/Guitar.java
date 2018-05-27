@@ -1,3 +1,4 @@
+import Enums.InstrumentType;
 import Interfaces.IPlay;
 
 import java.util.ArrayList;
@@ -7,8 +8,8 @@ public class Guitar extends Instrument implements IPlay {
     private GuitarString strings;
     private Fretboard fretboard;
 
-    public Guitar(String make, String model, double buyingPrice, double sellingPrice, GuitarString strings, Fretboard fretboard) {
-        super(make, model, buyingPrice, sellingPrice);
+    public Guitar(String make, String model, double buyingPrice, double sellingPrice, GuitarString strings, Fretboard fretboard, InstrumentType instrumentType) {
+        super(make, model, buyingPrice, sellingPrice, instrumentType);
         this.strings = strings;
         this.fretboard = fretboard;
     }
